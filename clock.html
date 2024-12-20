@@ -3,8 +3,22 @@
         <link rel="stylesheet" href="./clock.css"/>
     </head>
     <body>
-        <div id="MyClockDisplay" class="clock">08:36:42 PM</div>
+        <div id="MyClockDisplay" class="clock"></div>
+
         <script>
+            function clockRunner(){
+
+                var d = new Date();
+                var hour = d.getHours();
+                var minute = d.getMinutes();
+                var second = d.getSeconds();
+
+                var clock = hour + ":" + minute + ":" + second;
+
+                document.getElementById('MyClockDisplay').textContent = clock;
+            }
+
+            clockRunner();
         </script>
 
     </body>
